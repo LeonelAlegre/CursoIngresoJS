@@ -7,16 +7,20 @@ function mostrarAumento()
 	var sueldo;
 	var resultado;
 	var aumento;
- 
-	aumento = 10;
+	var porcentaje;
+ 	//valor del porcentaje a calcular:
+	porcentaje = 10;
 
 	sueldo = document.getElementById('sueldo').value;
 	sueldo = parseInt(sueldo);
 
-	resultado = document.getElementById('resultado');
+	resultado = document.getElementById('resultado').value;
 	resultado = parseInt('resultado');
 
-	aumento = sueldo*aumento/100;
+	aumento = sueldo*porcentaje/100;
 	resultado = aumento+sueldo;
+
+	//devuelve el resultado y lo muestra en el cuadro de texto "resultado"
+	document.getElementById('resultado').value = resultado;
 	console.log(resultado);
 }

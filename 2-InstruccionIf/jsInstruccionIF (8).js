@@ -7,11 +7,13 @@ function mostrar()
 	edad = parseInt(edad);
 	estado = document.getElementById('estadoCivil').value;
 
-	if(edad<18 && estado!=="Soltero")
+	//codigo inecesario pero establecido en el enunciado
+	/*if(edad<18 && estado!=="Soltero")
 	{
 		console.log("nada");
 	}
-	else if (estado=="Soltero" && edad>17)
+	else 
+	*/if (estado=="Soltero" && edad>17)
 	{
 		alert("Es soltero y no es menor");
 	}

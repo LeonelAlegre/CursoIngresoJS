@@ -25,6 +25,7 @@ function CalcularPrecio ()
  	marca = document.getElementById('Marca').value;
  	subTotal = lampara * cantidadLamparas;
  	recargo = 0;
+ 	descuento = 0;
 
  	//Ejercicio A
  	if(cantidadLamparas > 5)

@@ -10,5 +10,83 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  */
 function CalcularPrecio () 
 {
- 	
-}
+ 	var lampara;
+ 	var cantidadLamparas;
+ 	var subTotal;
+ 	var total;
+ 	var descuento;
+ 	var marca;
+ 	var recargo;
+ 	var totalConImpuestos;
+
+ 	lampara = 35;
+ 	cantidadLamparas = document.getElementById('Cantidad').value;
+ 	cantidadLamparas = parseInt(cantidadLamparas);
+ 	marca = document.getElementById('Marca').value;
+ 	subTotal = lampara * cantidadLamparas;
+ 	recargo = 0;
+
+ 	//Ejercicio A
+ 	if(cantidadLamparas > 5)
+ 	{
+ 		descuento = subTotal*50/100;
+ 	}
+ 	//Ejercicio B
+ 	if(cantidadLamparas==5)
+ 	{
+ 		if(marca == "ArgentinaLuz")
+ 		{
+ 			descuento = subTotal*40/100;
+ 		}
+ 		else
+ 		{
+	 		descuento = subTotal*30/100;
+ 		}
+ 	}
+ 	//Ejercicio C
+ 	if(cantidadLamparas == 4)
+ 	{
+ 		if (marca == "ArgentinaLuz" || marca == "FelipeLamparas")
+ 		{
+ 			descuento = subTotal*25/100;
+		}
+ 		else
+ 		{
+ 			descuento = subTotal*20/100;
+ 		}
+ 	}
+ 	//Ejercicio D
+ 	if(cantidadLamparas == 3)
+ 	{
+ 		if(marca == "ArgentinaLuz")
+ 		{
+ 			descuento = subTotal*15/100;
+ 		}
+ 		else if(marca == "FelipeLamparas")
+ 		{
+ 			descuento = subTotal*10/100;
+ 		}
+ 		else
+ 		{
+ 			descuento = subTotal*5/100;
+ 		}
+ 	}
+
+ 	total = subTotal-descuento;
+
+ 	//Ejercicio E
+ 	if(total>120)
+ 	{
+ 		recargo = total*10/100;
+ 	}
+
+	totalConImpuestos = total+recargo;
+
+ 		// document.getElementById('precioDescuento').value = total;
+ 		document.getElementById('precioDescuento').value = totalConImpuestos;
+	 	console.log("subTotal: "+subTotal);
+	 	console.log("descuento: "+descuento);
+	 	console.log("total: "+total);
+	 	console.log("total con imputos "+totalConImpuestos)
+	 	console.log("IIBB Usted pago "+recargo)
+}//fin funcion

@@ -10,7 +10,7 @@ function mostrar()
 	while(contador > 5)
 	{
 		contador = contador + 1 //tambien +1 o ++
-		numeroIngresado = pront("ingrese un numero");
+		numeroIngresado = prompt("ingrese un numero");
 		numeroIngresado = parseInt(numeroIngresado);
 		//el valor del contador se asigna al acumulador
 		acumulador = acumulador+numeroIngresado;

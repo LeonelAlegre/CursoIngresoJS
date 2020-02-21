@@ -2,17 +2,25 @@ function mostrar()
 {
 
 	var contador=0;
-	// declarar variables
-	
+	var numeroIngresado;
+	var numeroMaximo;
+	var numeroMinimo;
 	var respuesta='si';
 
-	while(respuesta!='no')
+	numeroIngresado=prompt("Ingresar un numero");
+	numeroIngresado=parseInt(numeroIngresado);
+
+	while(respuestar=="si")
 	{
-		
-	
+		if()
+		{
+
+		}
+		numeroMinimo=numeroIngresado;
+		numeroMaximo=numeroIngresado;
+
+		respuesta=prompt("Desea continuar?");
 	}
-
-
 
 
 }//FIN DE LA FUNCIÓN

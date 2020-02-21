@@ -13,7 +13,12 @@ function mostrar()
 		//numero ingresado por usuario
 		numeroIngresado = prompt("ingresar un numero");
 		numeroIngresado = parseInt(numeroIngresado);
-
+		//NaN devuelve verdadero mientras no sea un numero
+		while(isNaN(numeroIngresado))
+		{
+			numeroIngresado = prompt("error, ingresar numero");
+			numeroIngresado = parseInt(numeroIngresado);
+		}
 		//comprobacion para numero positivos +0
 		if(numeroIngresado>0)
 		{	

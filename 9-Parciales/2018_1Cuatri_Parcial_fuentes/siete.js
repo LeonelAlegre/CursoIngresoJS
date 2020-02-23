@@ -11,12 +11,24 @@ function mostrar()
 	var alumnos; //contador
 
 	alumnos=1;
-	//se guarda la nota del usuario
+	//se guarda la nota del usuario:
 	notas=prompt("ingresar nota");
 	notas=parseInt(notas);
-	//sexo=prompt("ingresar sexo (f o m)");
-	sexo=prompt("ingresar sexo (f o m)");
+	//validacion de notas:
+	while(isNaN(notas) || (notas<0 || notas>10))
+	{
+		console.log("error");
+		notas=prompt("Error. Ingresar nota del 0 la 10.");
+		notas=parseInt(notas);
+	}
 
+	sexo=prompt("ingresar sexo (f o m)");
+	//validacion de sexo:
+	while(sexo!="f" && sexo!="m")
+	{
+		console.log("error");
+		sexo=prompt("Error. Ingresar sexo (f o m)");
+	}
 	//se asigna el valor de la nota a nota mayor y menor
 	notaMayor=notas;
 	notaMenor=notas;
@@ -43,8 +55,19 @@ function mostrar()
 	{	
 		notas=prompt("ingresar nota");
 		notas=parseInt(notas);
+		//validacion de notas.
+		while(isNaN(notas) || (notas<0 || notas>10))
+		{
+			console.log("error");
+			notas=prompt("Error. Ingresar nota del 0 la 10.");
+			notas=parseInt(notas);
+		}
 		sexo=prompt("ingresar sexo (f o m)");
-
+		while(sexo!="f" && sexo!="m")
+		{
+			console.log("error");
+			sexo=prompt("Error. Ingresar sexo (f o m)");
+		}
 		notasTotales=notasTotales+notas;
 		if(notas>notaMayor)
 		{

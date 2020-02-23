@@ -7,7 +7,6 @@ function mostrar()
 	var numeroMinimo;
 	var respuesta='no';
 
-	
 	numeroIngresado=prompt("Ingresar un numero");
 	numeroIngresado=parseInt(numeroIngresado);
 

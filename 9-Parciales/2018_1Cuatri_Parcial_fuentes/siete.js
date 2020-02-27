@@ -6,18 +6,17 @@ function mostrar()
 	var sexoMenor;
 	var promedio;
 	var notaMenor;
-	var notaMayor;
-	var varonesContador=0;
+	var varonesContador;
 	var alumnos; //contador
 
 	alumnos=1;
+	varonesContador=0;
 	//se guarda la nota del usuario:
 	notas=prompt("ingresar nota");
 	notas=parseInt(notas);
 	//validacion de notas:
 	while(isNaN(notas) || (notas<0 || notas>10))
 	{
-		console.log("error");
 		notas=prompt("Error. Ingresar nota del 0 la 10.");
 		notas=parseInt(notas);
 	}
@@ -26,11 +25,9 @@ function mostrar()
 	//validacion de sexo:
 	while(sexo!="f" && sexo!="m")
 	{
-		console.log("error");
 		sexo=prompt("Error. Ingresar sexo (f o m)");
 	}
 	//se asigna el valor de la nota a nota mayor y menor
-	notaMayor=notas;
 	notaMenor=notas;
 	//
 	sexoMenor=sexo;
@@ -42,15 +39,6 @@ function mostrar()
 		varonesContador++; 
 	}
 
-
-	console.log("nota: "+notas);
-	console.log("notas totales: "+notasTotales);
-	console.log("notaMayor: "+notaMayor);
-	console.log("sexo: "+sexo);
-	console.log("notaMenor: "+notaMenor);
-	console.log("sexo de la menor nota: "+sexoMenor);
-	console.log("contador de varones+6: "+varonesContador);
-
 	while(alumnos<5)
 	{	
 		notas=prompt("ingresar nota");
@@ -58,21 +46,16 @@ function mostrar()
 		//validacion de notas.
 		while(isNaN(notas) || (notas<0 || notas>10))
 		{
-			console.log("error");
+		
 			notas=prompt("Error. Ingresar nota del 0 la 10.");
 			notas=parseInt(notas);
 		}
 		sexo=prompt("ingresar sexo (f o m)");
 		while(sexo!="f" && sexo!="m")
 		{
-			console.log("error");
 			sexo=prompt("Error. Ingresar sexo (f o m)");
 		}
 		notasTotales=notasTotales+notas;
-		if(notas>notaMayor)
-		{
-			notaMayor=notas;
-		}
 		if(notas<notaMenor)
 		{
 			notaMenor=notas;
@@ -83,18 +66,12 @@ function mostrar()
 		{
 			varonesContador++; 
 		}
-
-		console.log("nota: "+notas);
-		console.log("notas totales: "+notasTotales);
-		console.log("notaMayor: "+notaMayor);
-		console.log("sexo: "+sexo);
-		console.log("notaMenor: "+notaMenor);
-		console.log("sexo de la menor nota: "+sexoMenor);
-		console.log("contador de varones+6: "+varonesContador);
-		
 		alumnos++;
 	}
 
 	promedio=notasTotales/alumnos;
-	console.log("promedio: "+promedio);
+
+
+
+
 }
